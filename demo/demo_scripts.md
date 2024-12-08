@@ -12,8 +12,8 @@
 - Các độ đo nhóm sử dụng và mục đích của độ đo
 
 # Phần 3: Thực nghiệm.
-- Chưa biết nói gì.
-- Giải thích code, kịch bản thực nghiệm...
+- Phần 1: (Nguyên) Lý thuyết về mô hình FM, LightGCL,... Demo code huấn luyện mô hình, trình bày kết quả.
+- Phần 2: (Nguyên) Lý thuyết về mô hình GAT. Demo code huấn luyện mô hình, trình bày kết quả.
 
 # Phần 4: Kết luận 
 - Ý nghĩa đồ án, những điểm mạnh của nhóm.
