@@ -1,0 +1,1 @@
+Link ppt demo và thuyết trình của nhóm: https://www.canva.com/design/DAGYrTUItnY/A5-4x4O9X0fz8YC7jF_VZg/edit?utm_content=DAGYrTUItnY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
