@@ -1,0 +1,8 @@
+# Bỏ qua mọi file .DS_Store trong toàn bộ dự án
+**/.DS_Store
+
+# Bỏ qua mọi thư mục Kaggle Notebook Editor_files trong toàn bộ dự án
+**/Kaggle Notebook Editor_files/
+
+# Bỏ qua mọi file Kaggle Notebook Editor trong toàn bộ dự án
+**/Kaggle Notebook Editor
