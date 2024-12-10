@@ -16,6 +16,6 @@
 - Phần 2: (Nguyên) Lý thuyết về mô hình GAT. Demo code huấn luyện mô hình, trình bày kết quả.
 
 # Phần 4: Kết luận 
-- Ý nghĩa đồ án, những điểm mạnh của nhóm.
-- Những việc có thể làm để cải thiện đồ án.
+- Kết quả đạt được và ý nghĩa đồ án.
+- Cảm ơn mọi người.
 
