@@ -23,8 +23,12 @@
 		* Course_Prepare.ipynb: EDA và clean dữ liệu của course và các file quan hệ liên quan đến course
 		* Filter_Data.ipynb: Lọc lấy 5-core cho file quan hệ user-course
 		* Create_Course_User_Attributes: Tạo các đặc trưng cho course từ các file quan hệ và thêm đặc trưng giới tính cho user.
+	+ FM_With_Community_Tag.ipynb: File notebook huấn luyện mô hình FM khi user có thêm đặc trưng nhãn cộng đồng
+	+ FM_Without_Community_Tag.ipynb: File notebook huấn luyện mô hình FM khi user không có đặc trưng nhãn cộng đồng
+	+ LightGCL: File notebook huấn luyện mô hình LightGCL
 	+ Training_GAT_MultiEdgeType.ipynb: File notebook huấn luyện mô hình GAT với nhiều loại node.
 	+ Training_GAT_OneEdgeType.ipynb: File notebook huấn luyện mô hình GAT với ma trận utility matrix.
+	
 		
 - src\model:
 	+ FM: thư mục chứa các file để huấn luyện mô hình FM
