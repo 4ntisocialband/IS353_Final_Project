@@ -7,7 +7,7 @@
 	+ Võ Minh Quyền - 22521227
 	+ Ngô Thị Như Quỳnh - 22521232
 # Cấu trúc của repository:
-- data
+- data:
 	+ train_df.csv: File csv chứa dữ liệu mạng user course để train.
 	+ val_df.csv: File csv chứa dữ liệu validation.
 	+ test_df.csv: File csv chứa dữ liệu test.							
@@ -23,4 +23,8 @@
 - src\model:
 	+ FM: thư mục chứa các file để huấn luyện mô hình FM
 	+ LightGCL: thư mục chứa các file để huấn luyện mô hình LightGCL
+- results: chứa kết quả các thuật toán FM và LightGCL
+	+ FM_with_community_tag_result.log: Kết quả khi chạy thuật toán FM khi có đắc trưng nhãn cộng đồng
+	+ FM_without_community_tag_result.log: Kết quả khi chạy thuật toán FM khi không có đắc trưng nhãn cộng đồng
+	+ LightGCL_result.log: Kết quả khi chạy thuật toán LightGCL
 - README.md: Mô tả về dự án của nhóm

@@ -1,0 +1,374 @@
+2024-11-23 13:02:31,333 - root - INFO - Namespace(seed=2019, model_type='fm', data_name='train-running-data', data_dir='/kaggle/input/mooccubex-dataset-with-community/data-mooc-for-test-final', use_user_info=1, use_pretrain=0, pretrain_embedding_dir='datasets/pretrain/', pretrain_model_path='trained_model/model.pth', embed_dim=64, hidden_dim_list='[64, 32, 16]', mess_dropout='[0.1, 0.1, 0.1]', l2loss_lambda=1e-05, train_batch_size=1024, test_batch_size=1024, test_cores=0, lr=0.0001, n_epoch=1000, stopping_steps=5, print_every=500, evaluate_every=5, Ks='[1, 5, 10]', save_dir='trained_model/NFM/train-running-data/fm_embed-dim64_64-32-16_lr0.0001_pretrain0_user-info1/')
+2024-11-23 13:02:33,595 - root - INFO - n_users:              99970
+2024-11-23 13:02:33,596 - root - INFO - n_items:              2827
+2024-11-23 13:02:33,596 - root - INFO - n_entities:           10296
+2024-11-23 13:02:33,596 - root - INFO - n_user_attr:           100180
+2024-11-23 13:02:33,596 - root - INFO - n_users_entities:     110476
+2024-11-23 13:02:33,596 - root - INFO - n_cf_train:           1796450
+2024-11-23 13:02:33,596 - root - INFO - n_cf_test:            99970
+2024-11-23 13:02:33,596 - root - INFO - shape of user_matrix: (99970, 100180)
+2024-11-23 13:02:33,596 - root - INFO - shape of feat_matrix: (2827, 10296)
+2024-11-23 13:02:33,901 - root - INFO - NFM(
+  (linear): Linear(in_features=110476, out_features=1, bias=True)
+  (h): Linear(in_features=64, out_features=1, bias=False)
+)
+2024-11-23 13:03:01,491 - root - INFO - CF Training: Epoch 0001 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.4416 | Iter Mean Loss 0.5213
+2024-11-23 13:03:27,579 - root - INFO - CF Training: Epoch 0001 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.3749 | Iter Mean Loss 0.4531
+2024-11-23 13:03:52,890 - root - INFO - CF Training: Epoch 0001 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.3146 | Iter Mean Loss 0.4138
+2024-11-23 13:04:05,742 - root - INFO - CF Training: Epoch 0001 Total Iter 1755 | Total Time 91.0s | Iter Mean Loss 0.3995
+2024-11-23 13:04:30,546 - root - INFO - CF Training: Epoch 0002 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.3043 | Iter Mean Loss 0.3059
+2024-11-23 13:04:55,091 - root - INFO - CF Training: Epoch 0002 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2920 | Iter Mean Loss 0.3006
+2024-11-23 13:05:20,603 - root - INFO - CF Training: Epoch 0002 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2629 | Iter Mean Loss 0.2964
+2024-11-23 13:05:33,472 - root - INFO - CF Training: Epoch 0002 Total Iter 1755 | Total Time 87.7s | Iter Mean Loss 0.2943
+2024-11-23 13:05:58,569 - root - INFO - CF Training: Epoch 0003 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.2853 | Iter Mean Loss 0.2798
+2024-11-23 13:06:23,856 - root - INFO - CF Training: Epoch 0003 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.2590 | Iter Mean Loss 0.2776
+2024-11-23 13:06:48,893 - root - INFO - CF Training: Epoch 0003 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2890 | Iter Mean Loss 0.2755
+2024-11-23 13:07:01,439 - root - INFO - CF Training: Epoch 0003 Total Iter 1755 | Total Time 88.0s | Iter Mean Loss 0.2745
+2024-11-23 13:07:26,589 - root - INFO - CF Training: Epoch 0004 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.2524 | Iter Mean Loss 0.2656
+2024-11-23 13:07:51,778 - root - INFO - CF Training: Epoch 0004 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.2721 | Iter Mean Loss 0.2646
+2024-11-23 13:08:16,978 - root - INFO - CF Training: Epoch 0004 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2593 | Iter Mean Loss 0.2629
+2024-11-23 13:08:30,132 - root - INFO - CF Training: Epoch 0004 Total Iter 1755 | Total Time 88.7s | Iter Mean Loss 0.2623
+2024-11-23 13:08:56,646 - root - INFO - CF Training: Epoch 0005 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.2435 | Iter Mean Loss 0.2563
+2024-11-23 13:09:23,993 - root - INFO - CF Training: Epoch 0005 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2757 | Iter Mean Loss 0.2551
+2024-11-23 13:09:50,482 - root - INFO - CF Training: Epoch 0005 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2663 | Iter Mean Loss 0.2533
+2024-11-23 13:10:04,197 - root - INFO - CF Training: Epoch 0005 Total Iter 1755 | Total Time 94.1s | Iter Mean Loss 0.2525
+2024-11-23 13:21:36,915 - root - INFO - CF Evaluation: Epoch 0005 | Total Time 692.7s | Precision [0.2247, 0.0646], Recall [0.2247, 0.6465], NDCG [0.2247, 0.4144]
+2024-11-23 13:21:36,955 - root - INFO - Save model on epoch 0005!
+2024-11-23 13:22:02,937 - root - INFO - CF Training: Epoch 0006 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.2609 | Iter Mean Loss 0.2464
+2024-11-23 13:22:29,073 - root - INFO - CF Training: Epoch 0006 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2365 | Iter Mean Loss 0.2448
+2024-11-23 13:22:55,137 - root - INFO - CF Training: Epoch 0006 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2222 | Iter Mean Loss 0.2436
+2024-11-23 13:23:08,720 - root - INFO - CF Training: Epoch 0006 Total Iter 1755 | Total Time 91.8s | Iter Mean Loss 0.2431
+2024-11-23 13:23:35,312 - root - INFO - CF Training: Epoch 0007 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.2400 | Iter Mean Loss 0.2397
+2024-11-23 13:24:01,358 - root - INFO - CF Training: Epoch 0007 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2220 | Iter Mean Loss 0.2384
+2024-11-23 13:24:27,684 - root - INFO - CF Training: Epoch 0007 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.2229 | Iter Mean Loss 0.2372
+2024-11-23 13:24:41,407 - root - INFO - CF Training: Epoch 0007 Total Iter 1755 | Total Time 92.7s | Iter Mean Loss 0.2364
+2024-11-23 13:25:06,981 - root - INFO - CF Training: Epoch 0008 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.2348 | Iter Mean Loss 0.2307
+2024-11-23 13:25:33,189 - root - INFO - CF Training: Epoch 0008 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2094 | Iter Mean Loss 0.2297
+2024-11-23 13:25:58,921 - root - INFO - CF Training: Epoch 0008 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2589 | Iter Mean Loss 0.2289
+2024-11-23 13:26:12,575 - root - INFO - CF Training: Epoch 0008 Total Iter 1755 | Total Time 91.2s | Iter Mean Loss 0.2283
+2024-11-23 13:26:38,391 - root - INFO - CF Training: Epoch 0009 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.2141 | Iter Mean Loss 0.2239
+2024-11-23 13:27:03,849 - root - INFO - CF Training: Epoch 0009 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2305 | Iter Mean Loss 0.2225
+2024-11-23 13:27:29,918 - root - INFO - CF Training: Epoch 0009 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.2083 | Iter Mean Loss 0.2218
+2024-11-23 13:27:43,133 - root - INFO - CF Training: Epoch 0009 Total Iter 1755 | Total Time 90.6s | Iter Mean Loss 0.2209
+2024-11-23 13:28:09,133 - root - INFO - CF Training: Epoch 0010 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.2276 | Iter Mean Loss 0.2166
+2024-11-23 13:28:35,251 - root - INFO - CF Training: Epoch 0010 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.1975 | Iter Mean Loss 0.2162
+2024-11-23 13:29:01,180 - root - INFO - CF Training: Epoch 0010 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.2132 | Iter Mean Loss 0.2154
+2024-11-23 13:29:14,241 - root - INFO - CF Training: Epoch 0010 Total Iter 1755 | Total Time 91.1s | Iter Mean Loss 0.2149
+2024-11-23 13:40:37,823 - root - INFO - CF Evaluation: Epoch 0010 | Total Time 683.6s | Precision [0.2458, 0.0679], Recall [0.2458, 0.6795], NDCG [0.2458, 0.4416]
+2024-11-23 13:40:37,873 - root - INFO - Save model on epoch 0010!
+2024-11-23 13:41:03,262 - root - INFO - CF Training: Epoch 0011 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.2205 | Iter Mean Loss 0.2100
+2024-11-23 13:41:28,023 - root - INFO - CF Training: Epoch 0011 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.2124 | Iter Mean Loss 0.2087
+2024-11-23 13:41:53,220 - root - INFO - CF Training: Epoch 0011 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.2152 | Iter Mean Loss 0.2081
+2024-11-23 13:42:05,811 - root - INFO - CF Training: Epoch 0011 Total Iter 1755 | Total Time 87.9s | Iter Mean Loss 0.2079
+2024-11-23 13:42:30,615 - root - INFO - CF Training: Epoch 0012 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.2173 | Iter Mean Loss 0.2025
+2024-11-23 13:42:55,583 - root - INFO - CF Training: Epoch 0012 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1986 | Iter Mean Loss 0.2026
+2024-11-23 13:43:20,634 - root - INFO - CF Training: Epoch 0012 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1857 | Iter Mean Loss 0.2020
+2024-11-23 13:43:33,311 - root - INFO - CF Training: Epoch 0012 Total Iter 1755 | Total Time 87.5s | Iter Mean Loss 0.2017
+2024-11-23 13:43:58,285 - root - INFO - CF Training: Epoch 0013 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1929 | Iter Mean Loss 0.1966
+2024-11-23 13:44:23,540 - root - INFO - CF Training: Epoch 0013 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1985 | Iter Mean Loss 0.1960
+2024-11-23 13:44:48,407 - root - INFO - CF Training: Epoch 0013 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.2005 | Iter Mean Loss 0.1955
+2024-11-23 13:45:00,903 - root - INFO - CF Training: Epoch 0013 Total Iter 1755 | Total Time 87.6s | Iter Mean Loss 0.1950
+2024-11-23 13:45:25,733 - root - INFO - CF Training: Epoch 0014 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1725 | Iter Mean Loss 0.1910
+2024-11-23 13:45:50,818 - root - INFO - CF Training: Epoch 0014 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1792 | Iter Mean Loss 0.1903
+2024-11-23 13:46:15,467 - root - INFO - CF Training: Epoch 0014 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1775 | Iter Mean Loss 0.1896
+2024-11-23 13:46:28,384 - root - INFO - CF Training: Epoch 0014 Total Iter 1755 | Total Time 87.5s | Iter Mean Loss 0.1890
+2024-11-23 13:46:53,558 - root - INFO - CF Training: Epoch 0015 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1634 | Iter Mean Loss 0.1842
+2024-11-23 13:47:18,706 - root - INFO - CF Training: Epoch 0015 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1834 | Iter Mean Loss 0.1839
+2024-11-23 13:47:43,801 - root - INFO - CF Training: Epoch 0015 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1961 | Iter Mean Loss 0.1831
+2024-11-23 13:47:56,836 - root - INFO - CF Training: Epoch 0015 Total Iter 1755 | Total Time 88.5s | Iter Mean Loss 0.1826
+2024-11-23 13:59:17,562 - root - INFO - CF Evaluation: Epoch 0015 | Total Time 680.7s | Precision [0.2518, 0.0702], Recall [0.2518, 0.7019], NDCG [0.2518, 0.4565]
+2024-11-23 13:59:17,610 - root - INFO - Save model on epoch 0015!
+2024-11-23 13:59:42,783 - root - INFO - CF Training: Epoch 0016 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1653 | Iter Mean Loss 0.1785
+2024-11-23 14:00:07,938 - root - INFO - CF Training: Epoch 0016 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.2051 | Iter Mean Loss 0.1781
+2024-11-23 14:00:32,861 - root - INFO - CF Training: Epoch 0016 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1711 | Iter Mean Loss 0.1772
+2024-11-23 14:00:45,620 - root - INFO - CF Training: Epoch 0016 Total Iter 1755 | Total Time 88.0s | Iter Mean Loss 0.1768
+2024-11-23 14:01:10,478 - root - INFO - CF Training: Epoch 0017 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1789 | Iter Mean Loss 0.1727
+2024-11-23 14:01:35,271 - root - INFO - CF Training: Epoch 0017 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1951 | Iter Mean Loss 0.1717
+2024-11-23 14:02:00,201 - root - INFO - CF Training: Epoch 0017 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1943 | Iter Mean Loss 0.1710
+2024-11-23 14:02:13,273 - root - INFO - CF Training: Epoch 0017 Total Iter 1755 | Total Time 87.7s | Iter Mean Loss 0.1706
+2024-11-23 14:02:37,817 - root - INFO - CF Training: Epoch 0018 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1730 | Iter Mean Loss 0.1668
+2024-11-23 14:03:02,755 - root - INFO - CF Training: Epoch 0018 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1676 | Iter Mean Loss 0.1664
+2024-11-23 14:03:27,588 - root - INFO - CF Training: Epoch 0018 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1470 | Iter Mean Loss 0.1656
+2024-11-23 14:03:40,100 - root - INFO - CF Training: Epoch 0018 Total Iter 1755 | Total Time 86.8s | Iter Mean Loss 0.1651
+2024-11-23 14:04:04,818 - root - INFO - CF Training: Epoch 0019 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.1630 | Iter Mean Loss 0.1624
+2024-11-23 14:04:29,930 - root - INFO - CF Training: Epoch 0019 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1684 | Iter Mean Loss 0.1616
+2024-11-23 14:04:54,659 - root - INFO - CF Training: Epoch 0019 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1619 | Iter Mean Loss 0.1604
+2024-11-23 14:05:07,083 - root - INFO - CF Training: Epoch 0019 Total Iter 1755 | Total Time 87.0s | Iter Mean Loss 0.1601
+2024-11-23 14:05:31,671 - root - INFO - CF Training: Epoch 0020 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1777 | Iter Mean Loss 0.1560
+2024-11-23 14:05:56,856 - root - INFO - CF Training: Epoch 0020 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1406 | Iter Mean Loss 0.1550
+2024-11-23 14:06:21,671 - root - INFO - CF Training: Epoch 0020 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1421 | Iter Mean Loss 0.1544
+2024-11-23 14:06:34,623 - root - INFO - CF Training: Epoch 0020 Total Iter 1755 | Total Time 87.5s | Iter Mean Loss 0.1538
+2024-11-23 14:17:49,238 - root - INFO - CF Evaluation: Epoch 0020 | Total Time 674.6s | Precision [0.2676, 0.0725], Recall [0.2676, 0.7253], NDCG [0.2676, 0.4769]
+2024-11-23 14:17:49,285 - root - INFO - Save model on epoch 0020!
+2024-11-23 14:18:14,207 - root - INFO - CF Training: Epoch 0021 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1501 | Iter Mean Loss 0.1518
+2024-11-23 14:18:39,052 - root - INFO - CF Training: Epoch 0021 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1329 | Iter Mean Loss 0.1505
+2024-11-23 14:19:03,786 - root - INFO - CF Training: Epoch 0021 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1574 | Iter Mean Loss 0.1499
+2024-11-23 14:19:16,256 - root - INFO - CF Training: Epoch 0021 Total Iter 1755 | Total Time 87.0s | Iter Mean Loss 0.1495
+2024-11-23 14:19:41,070 - root - INFO - CF Training: Epoch 0022 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1446 | Iter Mean Loss 0.1458
+2024-11-23 14:20:05,788 - root - INFO - CF Training: Epoch 0022 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1379 | Iter Mean Loss 0.1454
+2024-11-23 14:20:30,414 - root - INFO - CF Training: Epoch 0022 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1492 | Iter Mean Loss 0.1446
+2024-11-23 14:20:43,237 - root - INFO - CF Training: Epoch 0022 Total Iter 1755 | Total Time 87.0s | Iter Mean Loss 0.1442
+2024-11-23 14:21:07,974 - root - INFO - CF Training: Epoch 0023 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.1702 | Iter Mean Loss 0.1400
+2024-11-23 14:21:32,879 - root - INFO - CF Training: Epoch 0023 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1460 | Iter Mean Loss 0.1399
+2024-11-23 14:21:57,690 - root - INFO - CF Training: Epoch 0023 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1366 | Iter Mean Loss 0.1393
+2024-11-23 14:22:10,265 - root - INFO - CF Training: Epoch 0023 Total Iter 1755 | Total Time 87.0s | Iter Mean Loss 0.1390
+2024-11-23 14:22:35,207 - root - INFO - CF Training: Epoch 0024 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1432 | Iter Mean Loss 0.1357
+2024-11-23 14:23:00,207 - root - INFO - CF Training: Epoch 0024 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1319 | Iter Mean Loss 0.1357
+2024-11-23 14:23:25,524 - root - INFO - CF Training: Epoch 0024 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1492 | Iter Mean Loss 0.1353
+2024-11-23 14:23:38,058 - root - INFO - CF Training: Epoch 0024 Total Iter 1755 | Total Time 87.8s | Iter Mean Loss 0.1347
+2024-11-23 14:24:02,868 - root - INFO - CF Training: Epoch 0025 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1378 | Iter Mean Loss 0.1316
+2024-11-23 14:24:27,731 - root - INFO - CF Training: Epoch 0025 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1334 | Iter Mean Loss 0.1314
+2024-11-23 14:24:52,574 - root - INFO - CF Training: Epoch 0025 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1218 | Iter Mean Loss 0.1309
+2024-11-23 14:25:04,962 - root - INFO - CF Training: Epoch 0025 Total Iter 1755 | Total Time 86.9s | Iter Mean Loss 0.1305
+2024-11-23 14:36:19,310 - root - INFO - CF Evaluation: Epoch 0025 | Total Time 674.3s | Precision [0.2756, 0.0741], Recall [0.2756, 0.7407], NDCG [0.2756, 0.4902]
+2024-11-23 14:36:19,357 - root - INFO - Save model on epoch 0025!
+2024-11-23 14:36:44,546 - root - INFO - CF Training: Epoch 0026 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1291 | Iter Mean Loss 0.1271
+2024-11-23 14:37:09,380 - root - INFO - CF Training: Epoch 0026 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1291 | Iter Mean Loss 0.1266
+2024-11-23 14:37:34,317 - root - INFO - CF Training: Epoch 0026 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1115 | Iter Mean Loss 0.1259
+2024-11-23 14:37:47,092 - root - INFO - CF Training: Epoch 0026 Total Iter 1755 | Total Time 87.7s | Iter Mean Loss 0.1257
+2024-11-23 14:38:12,382 - root - INFO - CF Training: Epoch 0027 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.1076 | Iter Mean Loss 0.1235
+2024-11-23 14:38:37,349 - root - INFO - CF Training: Epoch 0027 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1330 | Iter Mean Loss 0.1228
+2024-11-23 14:39:01,964 - root - INFO - CF Training: Epoch 0027 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1120 | Iter Mean Loss 0.1222
+2024-11-23 14:39:14,970 - root - INFO - CF Training: Epoch 0027 Total Iter 1755 | Total Time 87.9s | Iter Mean Loss 0.1220
+2024-11-23 14:39:39,996 - root - INFO - CF Training: Epoch 0028 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1315 | Iter Mean Loss 0.1193
+2024-11-23 14:40:04,700 - root - INFO - CF Training: Epoch 0028 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.1054 | Iter Mean Loss 0.1193
+2024-11-23 14:40:29,551 - root - INFO - CF Training: Epoch 0028 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1059 | Iter Mean Loss 0.1186
+2024-11-23 14:40:42,329 - root - INFO - CF Training: Epoch 0028 Total Iter 1755 | Total Time 87.4s | Iter Mean Loss 0.1183
+2024-11-23 14:41:07,052 - root - INFO - CF Training: Epoch 0029 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1028 | Iter Mean Loss 0.1160
+2024-11-23 14:41:31,906 - root - INFO - CF Training: Epoch 0029 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1149 | Iter Mean Loss 0.1153
+2024-11-23 14:41:56,926 - root - INFO - CF Training: Epoch 0029 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1210 | Iter Mean Loss 0.1149
+2024-11-23 14:42:09,369 - root - INFO - CF Training: Epoch 0029 Total Iter 1755 | Total Time 87.0s | Iter Mean Loss 0.1147
+2024-11-23 14:42:34,053 - root - INFO - CF Training: Epoch 0030 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1101 | Iter Mean Loss 0.1130
+2024-11-23 14:42:58,926 - root - INFO - CF Training: Epoch 0030 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1181 | Iter Mean Loss 0.1126
+2024-11-23 14:43:23,776 - root - INFO - CF Training: Epoch 0030 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1257 | Iter Mean Loss 0.1120
+2024-11-23 14:43:36,253 - root - INFO - CF Training: Epoch 0030 Total Iter 1755 | Total Time 86.9s | Iter Mean Loss 0.1118
+2024-11-23 14:54:57,976 - root - INFO - CF Evaluation: Epoch 0030 | Total Time 681.7s | Precision [0.2873, 0.0749], Recall [0.2873, 0.7489], NDCG [0.2873, 0.5008]
+2024-11-23 14:54:58,023 - root - INFO - Save model on epoch 0030!
+2024-11-23 14:55:22,829 - root - INFO - CF Training: Epoch 0031 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1125 | Iter Mean Loss 0.1093
+2024-11-23 14:55:47,802 - root - INFO - CF Training: Epoch 0031 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1193 | Iter Mean Loss 0.1088
+2024-11-23 14:56:12,779 - root - INFO - CF Training: Epoch 0031 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1149 | Iter Mean Loss 0.1083
+2024-11-23 14:56:25,506 - root - INFO - CF Training: Epoch 0031 Total Iter 1755 | Total Time 87.5s | Iter Mean Loss 0.1083
+2024-11-23 14:56:50,642 - root - INFO - CF Training: Epoch 0032 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0921 | Iter Mean Loss 0.1066
+2024-11-23 14:57:15,656 - root - INFO - CF Training: Epoch 0032 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1070 | Iter Mean Loss 0.1057
+2024-11-23 14:57:40,819 - root - INFO - CF Training: Epoch 0032 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1025 | Iter Mean Loss 0.1053
+2024-11-23 14:57:53,586 - root - INFO - CF Training: Epoch 0032 Total Iter 1755 | Total Time 88.1s | Iter Mean Loss 0.1049
+2024-11-23 14:58:18,548 - root - INFO - CF Training: Epoch 0033 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0875 | Iter Mean Loss 0.1036
+2024-11-23 14:58:43,669 - root - INFO - CF Training: Epoch 0033 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0975 | Iter Mean Loss 0.1031
+2024-11-23 14:59:08,722 - root - INFO - CF Training: Epoch 0033 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1069 | Iter Mean Loss 0.1029
+2024-11-23 14:59:21,637 - root - INFO - CF Training: Epoch 0033 Total Iter 1755 | Total Time 88.1s | Iter Mean Loss 0.1027
+2024-11-23 14:59:46,870 - root - INFO - CF Training: Epoch 0034 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.1161 | Iter Mean Loss 0.1005
+2024-11-23 15:00:11,480 - root - INFO - CF Training: Epoch 0034 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1064 | Iter Mean Loss 0.1005
+2024-11-23 15:00:36,411 - root - INFO - CF Training: Epoch 0034 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0922 | Iter Mean Loss 0.1001
+2024-11-23 15:00:49,562 - root - INFO - CF Training: Epoch 0034 Total Iter 1755 | Total Time 87.9s | Iter Mean Loss 0.0998
+2024-11-23 15:01:14,510 - root - INFO - CF Training: Epoch 0035 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0929 | Iter Mean Loss 0.0978
+2024-11-23 15:01:39,822 - root - INFO - CF Training: Epoch 0035 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0947 | Iter Mean Loss 0.0976
+2024-11-23 15:02:05,089 - root - INFO - CF Training: Epoch 0035 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1198 | Iter Mean Loss 0.0973
+2024-11-23 15:02:17,774 - root - INFO - CF Training: Epoch 0035 Total Iter 1755 | Total Time 88.2s | Iter Mean Loss 0.0972
+2024-11-23 15:13:44,496 - root - INFO - CF Evaluation: Epoch 0035 | Total Time 686.7s | Precision [0.2939, 0.0752], Recall [0.2939, 0.7523], NDCG [0.2939, 0.5063]
+2024-11-23 15:13:44,543 - root - INFO - Save model on epoch 0035!
+2024-11-23 15:14:09,190 - root - INFO - CF Training: Epoch 0036 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0947 | Iter Mean Loss 0.0962
+2024-11-23 15:14:33,978 - root - INFO - CF Training: Epoch 0036 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0948 | Iter Mean Loss 0.0953
+2024-11-23 15:14:58,803 - root - INFO - CF Training: Epoch 0036 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.1054 | Iter Mean Loss 0.0953
+2024-11-23 15:15:11,713 - root - INFO - CF Training: Epoch 0036 Total Iter 1755 | Total Time 87.2s | Iter Mean Loss 0.0950
+2024-11-23 15:15:36,691 - root - INFO - CF Training: Epoch 0037 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0941 | Iter Mean Loss 0.0933
+2024-11-23 15:16:01,274 - root - INFO - CF Training: Epoch 0037 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.1022 | Iter Mean Loss 0.0928
+2024-11-23 15:16:26,625 - root - INFO - CF Training: Epoch 0037 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.1157 | Iter Mean Loss 0.0925
+2024-11-23 15:16:39,419 - root - INFO - CF Training: Epoch 0037 Total Iter 1755 | Total Time 87.7s | Iter Mean Loss 0.0924
+2024-11-23 15:17:04,185 - root - INFO - CF Training: Epoch 0038 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0985 | Iter Mean Loss 0.0903
+2024-11-23 15:17:29,527 - root - INFO - CF Training: Epoch 0038 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0949 | Iter Mean Loss 0.0909
+2024-11-23 15:17:54,700 - root - INFO - CF Training: Epoch 0038 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0891 | Iter Mean Loss 0.0905
+2024-11-23 15:18:07,376 - root - INFO - CF Training: Epoch 0038 Total Iter 1755 | Total Time 88.0s | Iter Mean Loss 0.0903
+2024-11-23 15:18:32,501 - root - INFO - CF Training: Epoch 0039 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0890 | Iter Mean Loss 0.0893
+2024-11-23 15:18:57,216 - root - INFO - CF Training: Epoch 0039 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0887 | Iter Mean Loss 0.0892
+2024-11-23 15:19:22,173 - root - INFO - CF Training: Epoch 0039 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0922 | Iter Mean Loss 0.0887
+2024-11-23 15:19:34,683 - root - INFO - CF Training: Epoch 0039 Total Iter 1755 | Total Time 87.3s | Iter Mean Loss 0.0886
+2024-11-23 15:19:59,581 - root - INFO - CF Training: Epoch 0040 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0778 | Iter Mean Loss 0.0865
+2024-11-23 15:20:24,632 - root - INFO - CF Training: Epoch 0040 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0801 | Iter Mean Loss 0.0865
+2024-11-23 15:20:49,452 - root - INFO - CF Training: Epoch 0040 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0901 | Iter Mean Loss 0.0863
+2024-11-23 15:21:02,012 - root - INFO - CF Training: Epoch 0040 Total Iter 1755 | Total Time 87.3s | Iter Mean Loss 0.0861
+2024-11-23 15:32:28,806 - root - INFO - CF Evaluation: Epoch 0040 | Total Time 686.8s | Precision [0.3003, 0.0756], Recall [0.3003, 0.7561], NDCG [0.3003, 0.5117]
+2024-11-23 15:32:28,853 - root - INFO - Save model on epoch 0040!
+2024-11-23 15:32:53,633 - root - INFO - CF Training: Epoch 0041 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0838 | Iter Mean Loss 0.0853
+2024-11-23 15:33:18,264 - root - INFO - CF Training: Epoch 0041 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0853 | Iter Mean Loss 0.0848
+2024-11-23 15:33:43,439 - root - INFO - CF Training: Epoch 0041 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0880 | Iter Mean Loss 0.0845
+2024-11-23 15:33:56,034 - root - INFO - CF Training: Epoch 0041 Total Iter 1755 | Total Time 87.2s | Iter Mean Loss 0.0842
+2024-11-23 15:34:21,111 - root - INFO - CF Training: Epoch 0042 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0795 | Iter Mean Loss 0.0831
+2024-11-23 15:34:46,114 - root - INFO - CF Training: Epoch 0042 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0948 | Iter Mean Loss 0.0828
+2024-11-23 15:35:11,378 - root - INFO - CF Training: Epoch 0042 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0840 | Iter Mean Loss 0.0827
+2024-11-23 15:35:23,941 - root - INFO - CF Training: Epoch 0042 Total Iter 1755 | Total Time 87.9s | Iter Mean Loss 0.0826
+2024-11-23 15:35:48,845 - root - INFO - CF Training: Epoch 0043 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0908 | Iter Mean Loss 0.0819
+2024-11-23 15:36:13,711 - root - INFO - CF Training: Epoch 0043 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0828 | Iter Mean Loss 0.0814
+2024-11-23 15:36:38,575 - root - INFO - CF Training: Epoch 0043 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0959 | Iter Mean Loss 0.0813
+2024-11-23 15:36:51,392 - root - INFO - CF Training: Epoch 0043 Total Iter 1755 | Total Time 87.5s | Iter Mean Loss 0.0811
+2024-11-23 15:37:16,042 - root - INFO - CF Training: Epoch 0044 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0759 | Iter Mean Loss 0.0802
+2024-11-23 15:37:40,786 - root - INFO - CF Training: Epoch 0044 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0790 | Iter Mean Loss 0.0797
+2024-11-23 15:38:06,130 - root - INFO - CF Training: Epoch 0044 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0703 | Iter Mean Loss 0.0793
+2024-11-23 15:38:19,103 - root - INFO - CF Training: Epoch 0044 Total Iter 1755 | Total Time 87.7s | Iter Mean Loss 0.0791
+2024-11-23 15:38:43,564 - root - INFO - CF Training: Epoch 0045 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0739 | Iter Mean Loss 0.0786
+2024-11-23 15:39:08,396 - root - INFO - CF Training: Epoch 0045 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0745 | Iter Mean Loss 0.0786
+2024-11-23 15:39:33,191 - root - INFO - CF Training: Epoch 0045 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0778 | Iter Mean Loss 0.0783
+2024-11-23 15:39:45,754 - root - INFO - CF Training: Epoch 0045 Total Iter 1755 | Total Time 86.7s | Iter Mean Loss 0.0781
+2024-11-23 15:51:12,294 - root - INFO - CF Evaluation: Epoch 0045 | Total Time 686.5s | Precision [0.3048, 0.0759], Recall [0.3048, 0.7594], NDCG [0.3048, 0.5156]
+2024-11-23 15:51:12,342 - root - INFO - Save model on epoch 0045!
+2024-11-23 15:51:37,083 - root - INFO - CF Training: Epoch 0046 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0703 | Iter Mean Loss 0.0766
+2024-11-23 15:52:02,105 - root - INFO - CF Training: Epoch 0046 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0533 | Iter Mean Loss 0.0769
+2024-11-23 15:52:26,742 - root - INFO - CF Training: Epoch 0046 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0842 | Iter Mean Loss 0.0766
+2024-11-23 15:52:39,630 - root - INFO - CF Training: Epoch 0046 Total Iter 1755 | Total Time 87.3s | Iter Mean Loss 0.0765
+2024-11-23 15:53:04,262 - root - INFO - CF Training: Epoch 0047 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0892 | Iter Mean Loss 0.0759
+2024-11-23 15:53:29,340 - root - INFO - CF Training: Epoch 0047 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0946 | Iter Mean Loss 0.0759
+2024-11-23 15:53:54,478 - root - INFO - CF Training: Epoch 0047 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0799 | Iter Mean Loss 0.0757
+2024-11-23 15:54:07,454 - root - INFO - CF Training: Epoch 0047 Total Iter 1755 | Total Time 87.8s | Iter Mean Loss 0.0754
+2024-11-23 15:54:32,392 - root - INFO - CF Training: Epoch 0048 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0621 | Iter Mean Loss 0.0751
+2024-11-23 15:54:57,334 - root - INFO - CF Training: Epoch 0048 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0698 | Iter Mean Loss 0.0748
+2024-11-23 15:55:22,094 - root - INFO - CF Training: Epoch 0048 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0797 | Iter Mean Loss 0.0744
+2024-11-23 15:55:34,683 - root - INFO - CF Training: Epoch 0048 Total Iter 1755 | Total Time 87.2s | Iter Mean Loss 0.0741
+2024-11-23 15:55:59,319 - root - INFO - CF Training: Epoch 0049 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0643 | Iter Mean Loss 0.0728
+2024-11-23 15:56:24,834 - root - INFO - CF Training: Epoch 0049 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0761 | Iter Mean Loss 0.0726
+2024-11-23 15:56:49,821 - root - INFO - CF Training: Epoch 0049 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0722 | Iter Mean Loss 0.0725
+2024-11-23 15:57:02,502 - root - INFO - CF Training: Epoch 0049 Total Iter 1755 | Total Time 87.8s | Iter Mean Loss 0.0726
+2024-11-23 15:57:27,299 - root - INFO - CF Training: Epoch 0050 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0575 | Iter Mean Loss 0.0724
+2024-11-23 15:57:52,363 - root - INFO - CF Training: Epoch 0050 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0694 | Iter Mean Loss 0.0723
+2024-11-23 15:58:17,170 - root - INFO - CF Training: Epoch 0050 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0643 | Iter Mean Loss 0.0718
+2024-11-23 15:58:30,271 - root - INFO - CF Training: Epoch 0050 Total Iter 1755 | Total Time 87.8s | Iter Mean Loss 0.0716
+2024-11-23 16:09:52,104 - root - INFO - CF Evaluation: Epoch 0050 | Total Time 681.8s | Precision [0.3081, 0.0758], Recall [0.3081, 0.7582], NDCG [0.3081, 0.5166]
+2024-11-23 16:10:17,134 - root - INFO - CF Training: Epoch 0051 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0827 | Iter Mean Loss 0.0709
+2024-11-23 16:10:42,127 - root - INFO - CF Training: Epoch 0051 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0730 | Iter Mean Loss 0.0706
+2024-11-23 16:11:07,363 - root - INFO - CF Training: Epoch 0051 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0729 | Iter Mean Loss 0.0704
+2024-11-23 16:11:20,022 - root - INFO - CF Training: Epoch 0051 Total Iter 1755 | Total Time 87.9s | Iter Mean Loss 0.0703
+2024-11-23 16:11:44,912 - root - INFO - CF Training: Epoch 0052 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0606 | Iter Mean Loss 0.0692
+2024-11-23 16:12:09,699 - root - INFO - CF Training: Epoch 0052 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0667 | Iter Mean Loss 0.0692
+2024-11-23 16:12:34,517 - root - INFO - CF Training: Epoch 0052 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0644 | Iter Mean Loss 0.0693
+2024-11-23 16:12:46,962 - root - INFO - CF Training: Epoch 0052 Total Iter 1755 | Total Time 86.9s | Iter Mean Loss 0.0692
+2024-11-23 16:13:12,194 - root - INFO - CF Training: Epoch 0053 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0645 | Iter Mean Loss 0.0685
+2024-11-23 16:13:36,889 - root - INFO - CF Training: Epoch 0053 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0710 | Iter Mean Loss 0.0685
+2024-11-23 16:14:01,989 - root - INFO - CF Training: Epoch 0053 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0760 | Iter Mean Loss 0.0682
+2024-11-23 16:14:14,693 - root - INFO - CF Training: Epoch 0053 Total Iter 1755 | Total Time 87.7s | Iter Mean Loss 0.0681
+2024-11-23 16:14:39,474 - root - INFO - CF Training: Epoch 0054 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0625 | Iter Mean Loss 0.0673
+2024-11-23 16:15:04,433 - root - INFO - CF Training: Epoch 0054 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0691 | Iter Mean Loss 0.0671
+2024-11-23 16:15:29,479 - root - INFO - CF Training: Epoch 0054 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0604 | Iter Mean Loss 0.0670
+2024-11-23 16:15:42,074 - root - INFO - CF Training: Epoch 0054 Total Iter 1755 | Total Time 87.4s | Iter Mean Loss 0.0669
+2024-11-23 16:16:07,031 - root - INFO - CF Training: Epoch 0055 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0732 | Iter Mean Loss 0.0666
+2024-11-23 16:16:32,417 - root - INFO - CF Training: Epoch 0055 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0637 | Iter Mean Loss 0.0670
+2024-11-23 16:16:57,353 - root - INFO - CF Training: Epoch 0055 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0810 | Iter Mean Loss 0.0667
+2024-11-23 16:17:09,928 - root - INFO - CF Training: Epoch 0055 Total Iter 1755 | Total Time 87.9s | Iter Mean Loss 0.0665
+2024-11-23 16:28:36,759 - root - INFO - CF Evaluation: Epoch 0055 | Total Time 686.8s | Precision [0.3094, 0.0762], Recall [0.3094, 0.7623], NDCG [0.3094, 0.5193]
+2024-11-23 16:28:36,806 - root - INFO - Save model on epoch 0055!
+2024-11-23 16:29:01,753 - root - INFO - CF Training: Epoch 0056 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0476 | Iter Mean Loss 0.0652
+2024-11-23 16:29:26,692 - root - INFO - CF Training: Epoch 0056 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0636 | Iter Mean Loss 0.0653
+2024-11-23 16:29:51,134 - root - INFO - CF Training: Epoch 0056 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0567 | Iter Mean Loss 0.0653
+2024-11-23 16:30:03,899 - root - INFO - CF Training: Epoch 0056 Total Iter 1755 | Total Time 87.1s | Iter Mean Loss 0.0653
+2024-11-23 16:30:28,637 - root - INFO - CF Training: Epoch 0057 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0646 | Iter Mean Loss 0.0647
+2024-11-23 16:30:53,891 - root - INFO - CF Training: Epoch 0057 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0530 | Iter Mean Loss 0.0645
+2024-11-23 16:31:18,795 - root - INFO - CF Training: Epoch 0057 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0697 | Iter Mean Loss 0.0647
+2024-11-23 16:31:31,291 - root - INFO - CF Training: Epoch 0057 Total Iter 1755 | Total Time 87.4s | Iter Mean Loss 0.0646
+2024-11-23 16:31:56,045 - root - INFO - CF Training: Epoch 0058 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0534 | Iter Mean Loss 0.0644
+2024-11-23 16:32:20,931 - root - INFO - CF Training: Epoch 0058 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0666 | Iter Mean Loss 0.0642
+2024-11-23 16:32:45,726 - root - INFO - CF Training: Epoch 0058 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0707 | Iter Mean Loss 0.0641
+2024-11-23 16:32:58,216 - root - INFO - CF Training: Epoch 0058 Total Iter 1755 | Total Time 86.9s | Iter Mean Loss 0.0641
+2024-11-23 16:33:23,020 - root - INFO - CF Training: Epoch 0059 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0518 | Iter Mean Loss 0.0633
+2024-11-23 16:33:48,017 - root - INFO - CF Training: Epoch 0059 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0579 | Iter Mean Loss 0.0632
+2024-11-23 16:34:13,181 - root - INFO - CF Training: Epoch 0059 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0638 | Iter Mean Loss 0.0632
+2024-11-23 16:34:25,781 - root - INFO - CF Training: Epoch 0059 Total Iter 1755 | Total Time 87.6s | Iter Mean Loss 0.0632
+2024-11-23 16:34:50,526 - root - INFO - CF Training: Epoch 0060 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0623 | Iter Mean Loss 0.0635
+2024-11-23 16:35:15,110 - root - INFO - CF Training: Epoch 0060 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0647 | Iter Mean Loss 0.0633
+2024-11-23 16:35:40,281 - root - INFO - CF Training: Epoch 0060 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0570 | Iter Mean Loss 0.0628
+2024-11-23 16:35:53,379 - root - INFO - CF Training: Epoch 0060 Total Iter 1755 | Total Time 87.6s | Iter Mean Loss 0.0627
+2024-11-23 16:47:20,765 - root - INFO - CF Evaluation: Epoch 0060 | Total Time 687.4s | Precision [0.3058, 0.0761], Recall [0.3058, 0.7609], NDCG [0.3058, 0.5166]
+2024-11-23 16:47:45,949 - root - INFO - CF Training: Epoch 0061 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0605 | Iter Mean Loss 0.0615
+2024-11-23 16:48:11,271 - root - INFO - CF Training: Epoch 0061 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0691 | Iter Mean Loss 0.0616
+2024-11-23 16:48:36,451 - root - INFO - CF Training: Epoch 0061 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0555 | Iter Mean Loss 0.0615
+2024-11-23 16:48:49,020 - root - INFO - CF Training: Epoch 0061 Total Iter 1755 | Total Time 88.3s | Iter Mean Loss 0.0615
+2024-11-23 16:49:14,126 - root - INFO - CF Training: Epoch 0062 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0580 | Iter Mean Loss 0.0606
+2024-11-23 16:49:39,305 - root - INFO - CF Training: Epoch 0062 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0657 | Iter Mean Loss 0.0610
+2024-11-23 16:50:04,525 - root - INFO - CF Training: Epoch 0062 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0589 | Iter Mean Loss 0.0611
+2024-11-23 16:50:17,420 - root - INFO - CF Training: Epoch 0062 Total Iter 1755 | Total Time 88.4s | Iter Mean Loss 0.0609
+2024-11-23 16:50:42,816 - root - INFO - CF Training: Epoch 0063 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0572 | Iter Mean Loss 0.0607
+2024-11-23 16:51:07,800 - root - INFO - CF Training: Epoch 0063 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0732 | Iter Mean Loss 0.0603
+2024-11-23 16:51:32,568 - root - INFO - CF Training: Epoch 0063 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0615 | Iter Mean Loss 0.0603
+2024-11-23 16:51:45,425 - root - INFO - CF Training: Epoch 0063 Total Iter 1755 | Total Time 88.0s | Iter Mean Loss 0.0602
+2024-11-23 16:52:10,489 - root - INFO - CF Training: Epoch 0064 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0551 | Iter Mean Loss 0.0601
+2024-11-23 16:52:35,833 - root - INFO - CF Training: Epoch 0064 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0542 | Iter Mean Loss 0.0602
+2024-11-23 16:53:01,077 - root - INFO - CF Training: Epoch 0064 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0510 | Iter Mean Loss 0.0598
+2024-11-23 16:53:13,749 - root - INFO - CF Training: Epoch 0064 Total Iter 1755 | Total Time 88.3s | Iter Mean Loss 0.0598
+2024-11-23 16:53:38,770 - root - INFO - CF Training: Epoch 0065 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0655 | Iter Mean Loss 0.0590
+2024-11-23 16:54:03,932 - root - INFO - CF Training: Epoch 0065 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0483 | Iter Mean Loss 0.0591
+2024-11-23 16:54:29,214 - root - INFO - CF Training: Epoch 0065 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0551 | Iter Mean Loss 0.0590
+2024-11-23 16:54:42,034 - root - INFO - CF Training: Epoch 0065 Total Iter 1755 | Total Time 88.3s | Iter Mean Loss 0.0589
+2024-11-23 17:06:07,756 - root - INFO - CF Evaluation: Epoch 0065 | Total Time 685.7s | Precision [0.3060, 0.0761], Recall [0.3060, 0.7608], NDCG [0.3060, 0.5169]
+2024-11-23 17:06:33,004 - root - INFO - CF Training: Epoch 0066 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0669 | Iter Mean Loss 0.0584
+2024-11-23 17:06:57,960 - root - INFO - CF Training: Epoch 0066 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0686 | Iter Mean Loss 0.0582
+2024-11-23 17:07:22,908 - root - INFO - CF Training: Epoch 0066 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0707 | Iter Mean Loss 0.0582
+2024-11-23 17:07:35,857 - root - INFO - CF Training: Epoch 0066 Total Iter 1755 | Total Time 88.1s | Iter Mean Loss 0.0582
+2024-11-23 17:08:00,746 - root - INFO - CF Training: Epoch 0067 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0578 | Iter Mean Loss 0.0582
+2024-11-23 17:08:25,608 - root - INFO - CF Training: Epoch 0067 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0690 | Iter Mean Loss 0.0578
+2024-11-23 17:08:50,677 - root - INFO - CF Training: Epoch 0067 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0565 | Iter Mean Loss 0.0578
+2024-11-23 17:09:03,100 - root - INFO - CF Training: Epoch 0067 Total Iter 1755 | Total Time 87.2s | Iter Mean Loss 0.0579
+2024-11-23 17:09:27,947 - root - INFO - CF Training: Epoch 0068 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0558 | Iter Mean Loss 0.0567
+2024-11-23 17:09:53,023 - root - INFO - CF Training: Epoch 0068 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0544 | Iter Mean Loss 0.0570
+2024-11-23 17:10:17,859 - root - INFO - CF Training: Epoch 0068 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0473 | Iter Mean Loss 0.0569
+2024-11-23 17:10:30,322 - root - INFO - CF Training: Epoch 0068 Total Iter 1755 | Total Time 87.2s | Iter Mean Loss 0.0569
+2024-11-23 17:10:55,277 - root - INFO - CF Training: Epoch 0069 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0534 | Iter Mean Loss 0.0567
+2024-11-23 17:11:19,920 - root - INFO - CF Training: Epoch 0069 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0516 | Iter Mean Loss 0.0567
+2024-11-23 17:11:44,851 - root - INFO - CF Training: Epoch 0069 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0485 | Iter Mean Loss 0.0566
+2024-11-23 17:11:57,320 - root - INFO - CF Training: Epoch 0069 Total Iter 1755 | Total Time 87.0s | Iter Mean Loss 0.0566
+2024-11-23 17:12:21,943 - root - INFO - CF Training: Epoch 0070 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0472 | Iter Mean Loss 0.0562
+2024-11-23 17:12:46,826 - root - INFO - CF Training: Epoch 0070 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0631 | Iter Mean Loss 0.0562
+2024-11-23 17:13:11,746 - root - INFO - CF Training: Epoch 0070 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0671 | Iter Mean Loss 0.0563
+2024-11-23 17:13:24,413 - root - INFO - CF Training: Epoch 0070 Total Iter 1755 | Total Time 87.1s | Iter Mean Loss 0.0562
+2024-11-23 17:24:36,569 - root - INFO - CF Evaluation: Epoch 0070 | Total Time 672.2s | Precision [0.3002, 0.0758], Recall [0.3002, 0.7577], NDCG [0.3002, 0.5130]
+2024-11-23 17:25:01,366 - root - INFO - CF Training: Epoch 0071 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0543 | Iter Mean Loss 0.0559
+2024-11-23 17:25:26,149 - root - INFO - CF Training: Epoch 0071 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0551 | Iter Mean Loss 0.0560
+2024-11-23 17:25:51,005 - root - INFO - CF Training: Epoch 0071 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0510 | Iter Mean Loss 0.0558
+2024-11-23 17:26:03,905 - root - INFO - CF Training: Epoch 0071 Total Iter 1755 | Total Time 87.3s | Iter Mean Loss 0.0557
+2024-11-23 17:26:28,655 - root - INFO - CF Training: Epoch 0072 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0543 | Iter Mean Loss 0.0555
+2024-11-23 17:26:53,795 - root - INFO - CF Training: Epoch 0072 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0503 | Iter Mean Loss 0.0552
+2024-11-23 17:27:18,502 - root - INFO - CF Training: Epoch 0072 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0548 | Iter Mean Loss 0.0551
+2024-11-23 17:27:31,417 - root - INFO - CF Training: Epoch 0072 Total Iter 1755 | Total Time 87.5s | Iter Mean Loss 0.0550
+2024-11-23 17:27:56,221 - root - INFO - CF Training: Epoch 0073 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0528 | Iter Mean Loss 0.0551
+2024-11-23 17:28:20,909 - root - INFO - CF Training: Epoch 0073 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0549 | Iter Mean Loss 0.0548
+2024-11-23 17:28:45,766 - root - INFO - CF Training: Epoch 0073 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0550 | Iter Mean Loss 0.0549
+2024-11-23 17:28:58,225 - root - INFO - CF Training: Epoch 0073 Total Iter 1755 | Total Time 86.8s | Iter Mean Loss 0.0549
+2024-11-23 17:29:23,277 - root - INFO - CF Training: Epoch 0074 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0583 | Iter Mean Loss 0.0544
+2024-11-23 17:29:48,680 - root - INFO - CF Training: Epoch 0074 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0524 | Iter Mean Loss 0.0544
+2024-11-23 17:30:14,534 - root - INFO - CF Training: Epoch 0074 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0552 | Iter Mean Loss 0.0541
+2024-11-23 17:30:27,630 - root - INFO - CF Training: Epoch 0074 Total Iter 1755 | Total Time 89.4s | Iter Mean Loss 0.0540
+2024-11-23 17:30:54,811 - root - INFO - CF Training: Epoch 0075 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0592 | Iter Mean Loss 0.0537
+2024-11-23 17:31:21,805 - root - INFO - CF Training: Epoch 0075 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0520 | Iter Mean Loss 0.0539
+2024-11-23 17:31:48,206 - root - INFO - CF Training: Epoch 0075 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0473 | Iter Mean Loss 0.0537
+2024-11-23 17:32:01,896 - root - INFO - CF Training: Epoch 0075 Total Iter 1755 | Total Time 94.3s | Iter Mean Loss 0.0537
+2024-11-23 17:43:24,203 - root - INFO - CF Evaluation: Epoch 0075 | Total Time 682.3s | Precision [0.3074, 0.0759], Recall [0.3074, 0.7594], NDCG [0.3074, 0.5173]
+2024-11-23 17:43:49,508 - root - INFO - CF Training: Epoch 0076 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0572 | Iter Mean Loss 0.0536
+2024-11-23 17:44:14,982 - root - INFO - CF Training: Epoch 0076 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0531 | Iter Mean Loss 0.0533
+2024-11-23 17:44:40,743 - root - INFO - CF Training: Epoch 0076 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0511 | Iter Mean Loss 0.0531
+2024-11-23 17:44:53,326 - root - INFO - CF Training: Epoch 0076 Total Iter 1755 | Total Time 89.1s | Iter Mean Loss 0.0530
+2024-11-23 17:45:18,079 - root - INFO - CF Training: Epoch 0077 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0448 | Iter Mean Loss 0.0534
+2024-11-23 17:45:43,236 - root - INFO - CF Training: Epoch 0077 Iter 1000 / 1755 | Time 0.0s | Iter Loss 0.0627 | Iter Mean Loss 0.0531
+2024-11-23 17:46:07,939 - root - INFO - CF Training: Epoch 0077 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0500 | Iter Mean Loss 0.0530
+2024-11-23 17:46:20,629 - root - INFO - CF Training: Epoch 0077 Total Iter 1755 | Total Time 87.3s | Iter Mean Loss 0.0530
+2024-11-23 17:46:46,427 - root - INFO - CF Training: Epoch 0078 Iter 0500 / 1755 | Time 0.1s | Iter Loss 0.0384 | Iter Mean Loss 0.0525
+2024-11-23 17:47:12,066 - root - INFO - CF Training: Epoch 0078 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0419 | Iter Mean Loss 0.0523
+2024-11-23 17:47:37,226 - root - INFO - CF Training: Epoch 0078 Iter 1500 / 1755 | Time 0.0s | Iter Loss 0.0549 | Iter Mean Loss 0.0524
+2024-11-23 17:47:50,302 - root - INFO - CF Training: Epoch 0078 Total Iter 1755 | Total Time 89.7s | Iter Mean Loss 0.0524
+2024-11-23 17:48:15,838 - root - INFO - CF Training: Epoch 0079 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0471 | Iter Mean Loss 0.0523
+2024-11-23 17:48:41,224 - root - INFO - CF Training: Epoch 0079 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0561 | Iter Mean Loss 0.0524
+2024-11-23 17:49:07,276 - root - INFO - CF Training: Epoch 0079 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0514 | Iter Mean Loss 0.0521
+2024-11-23 17:49:20,766 - root - INFO - CF Training: Epoch 0079 Total Iter 1755 | Total Time 90.5s | Iter Mean Loss 0.0520
+2024-11-23 17:49:46,250 - root - INFO - CF Training: Epoch 0080 Iter 0500 / 1755 | Time 0.0s | Iter Loss 0.0447 | Iter Mean Loss 0.0518
+2024-11-23 17:50:12,186 - root - INFO - CF Training: Epoch 0080 Iter 1000 / 1755 | Time 0.1s | Iter Loss 0.0479 | Iter Mean Loss 0.0515
+2024-11-23 17:50:38,031 - root - INFO - CF Training: Epoch 0080 Iter 1500 / 1755 | Time 0.1s | Iter Loss 0.0489 | Iter Mean Loss 0.0514
+2024-11-23 17:50:51,176 - root - INFO - CF Training: Epoch 0080 Total Iter 1755 | Total Time 90.4s | Iter Mean Loss 0.0514
+2024-11-23 18:02:11,186 - root - INFO - CF Evaluation: Epoch 0080 | Total Time 680.0s | Precision [0.3064, 0.0757], Recall [0.3064, 0.7567], NDCG [0.3064, 0.5148]
+2024-11-23 18:02:11,191 - root - INFO - Best CF Evaluation: Epoch 0055 | Precision [0.3094, 0.0762], Recall [0.3094, 0.7623], NDCG [0.3094, 0.5193]
+Hello
+*** CF Evaluation @1 ***
+Precision@1   :  0.2676703
+Recall@1      :  0.2676703
+NDCG@1        :  0.2676703010903271
+*** CF Evaluation @5 ***
+Precision@5   :  0.11419428
+Recall@5      :  0.5709713
+NDCG@5        :  0.42632980523372355
+*** CF Evaluation @10 ***
+Precision@10   :  0.071142346
+Recall@10      :  0.71142346
+NDCG@10        :  0.47175627500481926
