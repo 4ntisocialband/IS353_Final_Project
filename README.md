@@ -20,8 +20,13 @@
 	+ demo_scripts.md: Kịch bản của video demo nhóm đã chuẩn bị.
 	+ demo_video_link.md: Đường dẫn đến video demo nhóm đã chuẩn bị.
 - notebooks:
+	+ create_user_course_data: Tạo dữ liệu quan hệ giữa user-course
+		* 0.Prepare.ipynb: Lọc bỏ các dữ liệu không cần thiết từ eda.
+		* 1.N_core_filtering: Lọc lấy các mối quan hệ chất lượng bằng 5-core filtering.
+		* 2.Mapping: Thực hiện mapping để dễ biểu diễn dữ liệu train.
+		* 3.Create_final_data: Tạo tập train, test, val bằng chiến thuật leave-one-out. 
 	+ prepare_data: 
-		* Community_Detection.ipynb: ạo dữ liệu quan hệ giữa user-user, course-course có trọng số và thực hiện phát hiện cộng đồng. 
+		* Community_Detection.ipynb: Tạo dữ liệu quan hệ giữa user-user, course-course có trọng số và thực hiện phát hiện cộng đồng. 
 		* Course_Prepare.ipynb: EDA và clean dữ liệu của course và các file quan hệ liên quan đến course
 		* Filter_Data.ipynb: Lọc lấy 5-core cho file quan hệ user-course
 		* Create_Course_User_Attributes: Tạo các đặc trưng cho course từ các file quan hệ và thêm đặc trưng giới tính cho user.
