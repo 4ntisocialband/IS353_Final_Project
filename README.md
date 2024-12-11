@@ -12,6 +12,8 @@
 	+ val_df.csv: File csv chứa dữ liệu validation.
 	+ test_df.csv: File csv chứa dữ liệu test.							
 	+ kg_final.txt: Các cạnh mở rộng để xây dựng dữ liệu mạng.
+	+ user_list.txt: Danh sách user và các thuộc tính của user trong đó có thêm thuộc tính nhãn cộng đồng để chạy thuật toán FM
+	+ user_list_without_community.txt: Danh sách user và các thuộc tính trong đó không có thuộc tính nhãn cộng đồng
 	+ trnMat.pkl, valMat.plk, tstMat.pkl là các file chứa ma trận kề biều diễn mạng dùng để huấn luyện mô hình LightGCL
 - demo:
 	+ demo_ppt.md: Đường dẫn đến ppt nhóm đã sử dụng trong video demo.
